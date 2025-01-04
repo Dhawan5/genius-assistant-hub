@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { AuthModal } from "./AuthModal";
 
 export const Hero = () => {
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center bg-[#0F172A] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-accent/10 to-transparent" />
@@ -15,6 +19,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg rounded-lg animate-glow"
+              onClick={() => setIsAuthModalOpen(true)}
             >
               Try Ultimate AI Free
             </Button>
@@ -30,6 +35,11 @@ export const Hero = () => {
           </p>
         </div>
       </div>
+
+      <AuthModal 
+        isOpen={isAuthModalOpen} 
+        onClose={() => setIsAuthModalOpen(false)} 
+      />
     </div>
   );
 };
