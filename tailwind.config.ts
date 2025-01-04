@@ -52,6 +52,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        cyber: {
+          DEFAULT: "#06B6D4",
+          muted: "#0891B2",
+          dark: "#0E7490",
+        },
       },
       keyframes: {
         typing: {

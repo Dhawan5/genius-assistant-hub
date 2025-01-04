@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -35,4 +36,25 @@
     @apply bg-background text-foreground font-['Inter'];
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+/* Auth UI Custom Styles */
+.auth-container {
+  font-family: 'Share Tech Mono', monospace !important;
+}
+
+.auth-container [data-button="provider"] {
+  @apply border border-cyber text-cyber bg-transparent hover:bg-cyber/10 transition-colors !important;
+}
+
+.auth-container [data-divider="horizontal"] {
+  @apply before:border-cyber/30 after:border-cyber/30 text-cyber/70 !important;
+}
+
+.auth-container [data-input="input"] {
+  @apply bg-[#1E293B] border-cyber text-cyber placeholder:text-cyber/50 !important;
+}
+
+.auth-container [data-button="button"] {
+  @apply bg-cyber hover:bg-cyber-muted text-white border-none shadow-none !important;
 }
